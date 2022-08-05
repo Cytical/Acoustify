@@ -1,0 +1,29 @@
+/* COLORS : black, #D58DC2, #9F548B */
+
+.login {
+    display: grid;
+    background-color: black;
+    height: 100vh;
+    place-items: center;
+}
+
+.login>img {
+    max-width: 100%;
+    height: auto;
+}
+
+.login>a {
+    margin-top: -200px;
+    color: black;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 99px;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #D58DC2;
+}
+
+a:hover {
+    transition-duration: 0.4s;
+    background-color: #9F548B;
+}
