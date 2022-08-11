@@ -1,22 +1,36 @@
 import React from "react";
 import "./Login.css";
 
+const generateRandomString = function(length) {
+  var text = '';
+  var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+  for (var i = 0; i < length; i++) {
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+  }
+  return text;
+};
+
 const auth_endpoint = "https://accounts.spotify.com/authorize";
 
 const clientId = "ae3f94d228c64ca69dfb58b533b679ef";
 const redirectUri = "http://localhost:3000";
+const state = generateRandomString(16);
 const scopes = [
   "user-read-currently-playing",
   "user-read-recently-played",
   "user-read-playback-state",
+  "user-read-private",
   "user-top-read",
   "user-modify-playback-state",
+  "user-library-read",
+  "playlist-modify-public"
 ];
 
-const accessUrl = `${auth_endpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
-  "%20")}&response_type=token&show_dialog=true`;
+const accessUrl = `${auth_endpoint}?client_id=${clientId}&response_type=code&redirect_uri=${redirectUri}&state=${state}&scope=${scopes.join(
+  "%20")}`;
 
-const accessUrl2 = "https://accounts.spotify.com/authorize?client_id=ae3f94d228c64ca69dfb58b533b679ef&response_type=code&redirect_uri=http://localhost:3000&scope=streaming%20user-read-email%20user-read-private%20user-library-read%20user-library-modify%20user-read-playback-state%20user-modify-playback-state"
+
 
 
 function Login() {
@@ -27,7 +41,7 @@ function Login() {
         alt=""
       />
 
-      <a href={accessUrl2}>Login to Spotify</a>
+      <a href={accessUrl}>Login to Spotify</a>
     </div>
   );
 }
