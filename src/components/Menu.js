@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import useAuth from '../useAuth'
 import SpotifyWebApi from 'spotify-web-api-node'
-import Library from './Library/Library'
+import Header from './Header/Header.js'
+import Library from './Library/Library.js'
+import "./Menu.css"
 
 const spotifyApi = new SpotifyWebApi({
   clientId: 'ae3f94d228c64ca69dfb58b533b679ef',
@@ -70,8 +72,9 @@ spotifyApi.getMyTopTracks()
   
   return (
     <div> 
+      <Header />
      <div>{username} </div> 
-     <Library data={JSON.stringify(user_tracks)}/>
+     {/* <Library data={JSON.stringify(user_tracks)}/> */}
     </div>
   )
 }

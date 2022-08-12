@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from "./Logo.png"
 import "./Login.css";
 
 //security
@@ -32,13 +33,15 @@ const accessUrl = `${auth_endpoint}?client_id=${clientId}&response_type=code&red
 
 function Login() {
   return (
-    <div className="login">
-      <img
-        src="https://i.imgur.com/LFIighh.png"
-        alt="Acoustify by Ezra Guiao"
-      />
+    <div className="login-page">
+      <div className="login">
+        <img
+          src={Logo}
+          alt="Acoustify by Ezra Guiao"
+        />
 
-      <a href={accessUrl}>Login to Spotify</a>
+        <a className= "loginButton" href={accessUrl}>Login to Spotify</a>
+      </div>
     </div>
   );
 }
