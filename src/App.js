@@ -1,6 +1,5 @@
-import './App.css';
-import Login from "./Login"
-import Menu from "./Menu"
+import Login from "./components/Login/Login.js"
+import Menu from "./components/Menu"
 
 const code = new URLSearchParams(window.location.search).get('code');
 

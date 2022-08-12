@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import useAuth from './useAuth'
+import useAuth from '../useAuth'
 import SpotifyWebApi from 'spotify-web-api-node'
-import Library from './Library'
+import Library from './Library/Library'
 
 const spotifyApi = new SpotifyWebApi({
   clientId: 'ae3f94d228c64ca69dfb58b533b679ef',
