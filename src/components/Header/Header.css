@@ -1,21 +1,34 @@
-header a{
-    font-size: large;
-    color: black;
-    text-decoration: none;
-    
-}
-
-header a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-header a.active {
-    background-color: dodgerblue;
-    color: white;
-}
-
 .navbar {
-    /* background: rgb(2, 0, 36);
-    background: linear-gradient(324deg, rgba(2, 0, 36, 1) 0%, rgba(159, 84, 139, 1) 35%, rgba(213, 141, 194, 1) 64%, rgba(0, 212, 255, 1) 100%); */
+    text-align: center;
+    font-size: 22px;
 }
+
+.navbar-brand {
+    margin-left: 20px;
+}
+
+.navbar-nav {
+    text-align: center;
+}
+.nav-link {
+    margin-left: 32px;
+}
+.navbar-right {
+    margin-left: 200px;
+}
+
+.btn-pink {
+    background-color: #D58DC2;
+}
+
+@media (max-width : 800px) {
+    .nav-link {
+        padding-bottom: 15px;
+    }
+    .d-flex {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+}
+
