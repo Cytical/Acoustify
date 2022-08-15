@@ -1,6 +1,5 @@
 .navbar {
     text-align: center;
-    font-size: 22px;
 }
 
 .navbar-brand {
@@ -11,8 +10,14 @@
     text-align: center;
 }
 .nav-link {
+    font-size: 22px;
     margin-left: 32px;
+    transition: all 200ms;
 }
+.nav-link:hover {
+    font-size: 40px;
+}
+
 .navbar-right {
     margin-left: 200px;
 }
@@ -31,4 +36,6 @@
         }
 
 }
+
+
 

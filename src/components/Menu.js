@@ -7,7 +7,6 @@ import TopArtists from './TopArtists/TopArtists.js'
 import TopSongs from './TopSongs/TopSongs.js'
 import Recommend from './Recommend/Recommend.js'
 import Footer from './Footer/Footer.js'
-import "./Menu.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const spotifyApi = new SpotifyWebApi({
@@ -19,7 +18,8 @@ export default function Menu({ code }) {
   const accessToken = useAuth(code);
 
   const [username, setUsername] = useState("");
-  const [user_tracks, setUser_tracks] = useState([]);
+  const [userTracks, setUserTracks] = useState([]);
+  const [userTopTracks, setUserTopTracks] = useState([]);
 
   // useEffect(() => {
   //   if (!accessToken) return
@@ -46,9 +46,8 @@ export default function Menu({ code }) {
     })
     .then(function(data) {
       data.body.items.forEach(track => {
-        setUser_tracks(user_tracks => [...user_tracks, track])
+        setUserTracks(old => [...old, track])
       })
-      console.log("USER", user_tracks)
     }, function(err) {
       console.log('Something went wrong!222', err);
     });
@@ -66,8 +65,10 @@ export default function Menu({ code }) {
   /* Get a User’s Top Tracks*/
   spotifyApi.getMyTopTracks()
     .then(function(data) {
-      let topTracks = data.body.items;
-      console.log(topTracks);
+      setUserTopTracks([])
+      data.body.items.forEach(track => {
+        setUserTopTracks(old => [...old, track])
+      })
     }, function(err) {
       console.log('Something went wrong!', err);
     });
@@ -83,7 +84,7 @@ export default function Menu({ code }) {
         <Routes> 
           <Route path="/" element={<Library/>}/>
           <Route path="top-artists" element={<TopArtists/>}/>
-          <Route path="top-songs" element={<TopSongs data={user_tracks}/>}/>
+          <Route path="top-songs" element={<TopSongs data={userTopTracks}/>}/>
           <Route path="recommend" element={<Recommend/>}/>
         </Routes>
       {/* <Footer /> */}

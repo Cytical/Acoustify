@@ -3,12 +3,10 @@ import React from 'react'
 import "./Header.css";
 import logo from './Logo.png';
 import 'bootstrap/dist/js/bootstrap.js';
-import { Link, useNavigate } from'react-router-dom';
+import { Link } from'react-router-dom';
 
 
 export default function Header() {
-
-  const navigate = useNavigate();
 
   return (
  <nav className="navbar navbar-expand-md navbar-dark bg-dark">
