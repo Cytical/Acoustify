@@ -2,12 +2,12 @@ import React from 'react'
 
 export default function Song( {data, id}) {
 
-    console.log(data)
+    // console.log(data)
     const songName = data.name
     const artist = data.artists[0].name
     const albumImage = data.album.images[1].url
 
-    console.log()
+    console.log('test')
 
   return (
     <div className='container-sm'> 
