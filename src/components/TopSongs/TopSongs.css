@@ -9,7 +9,7 @@
 
 }
 
-.song-id {
+.song-rank {
     font-size: 48px;
     font-weight: bold;
     position: relative;
@@ -24,17 +24,23 @@
     font-weight: bold;
 }
 
-.container-sm {
+.container-sm.song {
     text-align: center;
-    padding-top: 10px;
     color: white;
-}
-
-.row {
-    padding: 20px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
     background-color: #212529;
     border-radius: 40px;
 }
+
+/* .container:hover {
+    transition: all 200ms;
+    font-size: 40px;
+} */
+
 
 /* .info {
     background-color: black;
@@ -53,4 +59,29 @@
 
 div {
     color: white;
+}
+
+.btn-pink {
+    color: black;
+    background-color: #D58DC2;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.btn-pink:hover {
+    color: white;
+    background-color: #9F548B;
+}
+
+
+.btn-block {
+    width: 100%
+}
+
+.time-frame {
+    background-color: black !important;
+}
+
+.button-row {
+    flex:grid;
 }

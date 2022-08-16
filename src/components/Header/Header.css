@@ -14,7 +14,7 @@
     margin-left: 32px;
     transition: all 200ms;
 }
-.nav-link:hover {
+.header > .nav-link:hover {
     font-size: 40px;
 }
 
@@ -22,7 +22,7 @@
     margin-left: 200px;
 }
 
-.btn-pink {
+.search-pink {
     background-color: #D58DC2;
 }
 

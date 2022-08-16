@@ -25,7 +25,6 @@ export default function Menu({ code }) {
     if (!accessToken) return
     spotifyApi.setAccessToken(accessToken)
     setToken(spotifyApi)
-    console.log("NEW TOKEN")
   }, [accessToken])
   
 
@@ -55,16 +54,6 @@ export default function Menu({ code }) {
   //     console.log('Something went wrong!222', err);
   //   });
 
-  // /* Get a User’s Top Artists*/
-  // spotifyApi.getMyTopArtists()
-  //   .then(function(data) {
-  //     // console.log(data)
-  //     let topArtists = data.body.items;
-  //     // console.log(topArtists);
-  //   }, function(err) {
-  //     console.log('Something went wrong!333', err);
-  //   });
-
 
 
   // }, [accessToken])
@@ -75,12 +64,11 @@ export default function Menu({ code }) {
       <Header />
         <Routes> 
           <Route path="/" element={<Library/>}/>
-          <Route path="top-artists" element={<TopArtists/>}/>
-          <Route path="top-songs" element={<TopSongs spotify={token} timeRange={'short_term'}/>}>
-            <Route path="short-term" element={<TopSongs spotify={token} timeRange={'short_term'}/>}/>
-            <Route path="medium-term" element={<TopSongs spotify={token} timeRange={'medium_term'}/>}/>
-            <Route path="long-term" element={<TopSongs spotify={token} timeRange={'long_term'}/>}/>
-          </Route>
+          <Route path="top-artists" element={<TopArtists spotify={token}/>}/>
+          <Route path="top-songs" element={<TopSongs spotify={token}/>}/>
+          <Route path="top-songs/short-term" element={<TopSongs spotify={token} timeRange={'short_term'}/>}/>
+          <Route path="top-songs/medium-term" element={<TopSongs spotify={token} timeRange={'medium_term'}/>}/>
+          <Route path="top-songs/long-term" element={<TopSongs spotify={token} timeRange={'long_term'}/>}/>
           <Route path="recommend" element={<Recommend/>}/>
         </Routes>
       {/* <Footer /> */}
