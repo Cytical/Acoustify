@@ -1,0 +1,16 @@
+.text-center.p-3 {
+background-color: rgba(0, 0, 0, 0.2);
+}
+
+.text-white {
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.text-white:hover {
+    color: #D58DC2 !important
+}
+
+h5 {
+    color: #D58DC2
+}
