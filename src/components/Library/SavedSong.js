@@ -3,7 +3,7 @@ import moment from 'moment/moment'
 
 export default function SavedSong( {data, index, id} ) {
 
-    console.log(data)
+    // console.log(data)
     const songName = data.track.name
     const artist = data.track.artists[0].name
     const albumImage = data.track.album.images[1].url

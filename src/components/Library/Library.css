@@ -1,6 +1,14 @@
 .library-label {
     font-size: 48px;
     padding-bottom: 10px;
+    color: #D58DC2;
+}
+
+.library-playlist-label {
+    font-size: 48px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    color: #D58DC2;
 }
 
 .table-scroll {
@@ -38,4 +46,40 @@
 
 .text-gray {
     color: #a9a9a9;
+}
+
+.playlist {
+    text-align: center;
+    font-size: 18px;
+    color: white;
+}
+
+.playlist-img {
+    opacity: 1;
+    transition: .5s ease;
+}
+
+.playlist-container:hover {
+    opacity: 0.6;
+}
+
+.playlist-container {
+    position: relative
+}
+
+.playlist-container:hover .play-img {
+    display: block;
+}
+
+.play-img {
+    position: absolute;
+    display: none;
+    top: 30%;
+    margin: 0 auto;
+    left: 0px;
+    right: 0px;
+}
+
+img {
+    object-fit: cover;
 }

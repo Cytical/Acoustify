@@ -31,9 +31,9 @@ export default function TopArtists({spotify, timeRange}) {
             data.push(
             <div className='container-sm artist'>
                 <div className='row'>
-                    <Artist data={userTopArtists[i]} id={userTopArtists[i].id} index={i}/>
-                    <Artist data={userTopArtists[i + 1]} id={userTopArtists[i + 1].id} index={i + 1}/>
-                    <Artist data={userTopArtists[i + 2]} id={userTopArtists[i + 2].id} index={i + 2}/>
+                    <Artist data={userTopArtists[i]} id={userTopArtists[i].id} key={userTopArtists[i].id} index={i}/>
+                    <Artist data={userTopArtists[i + 1]} id={userTopArtists[i + 1].id} key={userTopArtists[i + 1].id} index={i + 1}/>
+                    <Artist data={userTopArtists[i + 2]} id={userTopArtists[i + 2].id} key={userTopArtists[i + 2].id} index={i + 2}/>
                 </div>
             </div>)
             }
@@ -41,8 +41,8 @@ export default function TopArtists({spotify, timeRange}) {
             data.push(
             <div className='container-sm artist'>
                 <div className='row'>
-                    <Artist data={userTopArtists[i]} id={userTopArtists[i].id} index={i}/>
-                    <Artist data={userTopArtists[i + 1]} id={userTopArtists[i + 1].id} index={i + 1}/>
+                    <Artist data={userTopArtists[i]} id={userTopArtists[i].id} key={userTopArtists[i].id} index={i}/>
+                    <Artist data={userTopArtists[i + 1]} id={userTopArtists[i + 1].id} key={userTopArtists[i + 1].id} index={i + 1}/>
                 </div>
             </div>)
             }
@@ -50,7 +50,7 @@ export default function TopArtists({spotify, timeRange}) {
             data.push(
             <div className='container-sm artist'>
                 <div className='row'>
-                    <Artist data={userTopArtists[i]} id={userTopArtists[i + 2].id} index={i}/>
+                    <Artist data={userTopArtists[i]} id={userTopArtists[i].id} key={userTopArtists[i].id} index={i}/>
                 </div>
             </div>)
             }

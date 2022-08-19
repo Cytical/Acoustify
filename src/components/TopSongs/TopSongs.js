@@ -53,7 +53,7 @@ export default function TopSongs({spotify, timeRange}) {
 
 
     {userTopTracks.map((data, i) => { 
-      return <Song data={data} id={data.id} index={i}/>
+      return <Song data={data} key={data.id} id={data.id} index={i}/>
     })}
     </>
   )

@@ -28,8 +28,8 @@ export default function Footer() {
       <p>
         Acoustify is a project initially built to learn React.js (Frontend) and Node.js (Backend)
         It incorporates user authentication and recieves user data through Spotify's Web API. 
-        With the help of Michael Thelin's Spotify Web API Node wrapper, endpoint requests are done 
-        through builtin functions which only require a token provided by Spotify. Future development
+        With the help of Spotify Web API Node wrapper, endpoint requests are done 
+        through built-in functions which only require a token provided by Spotify. Future development
         will include Web Playback SDK which will allow users to play songs in Spotify directly through
         this web app.
       </p>
