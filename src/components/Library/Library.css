@@ -1,0 +1,41 @@
+.library-label {
+    font-size: 48px;
+    padding-bottom: 10px;
+}
+
+.table-scroll {
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.card {
+    background-color: #212529;
+}
+
+.lib-img {
+    object-fit: fill;
+    float: left;
+    margin-right: 20px;
+}
+
+.lib-song-name {
+    padding-top: 12px;
+    font-weight: 600;
+}
+
+.lib-song-artist {
+    font-weight: 100;
+}
+
+.td-element {
+    border: none;
+}
+
+.date-added {
+    color: #a9a9a9;
+    font-weight: 100;
+}
+
+.text-gray {
+    color: #a9a9a9;
+}

@@ -19,7 +19,7 @@ export default function Header() {
     </button>
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className="navbar-nav header">
-        <Link className="nav-link" to="library"> Library</Link>
+        <Link className="nav-link" to="/"> Library</Link>
         <Link className="nav-link" to="top-songs"> Top Songs</Link>
         <Link className="nav-link" to="top-artists"> Top Artists</Link>
         <Link className="nav-link" to="recommend"> Recommend</Link>

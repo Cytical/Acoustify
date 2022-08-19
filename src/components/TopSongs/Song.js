@@ -16,7 +16,7 @@ export default function Song( {data, id, index} ) {
                 <div className='song-rank'>{index + 1}</div> 
             </div>
             <div className="col-lg-4">
-                <img className='album-img' src={albumImage} alt='' width={320} height={320}/>
+                <img className='album-img' src={albumImage} alt='' width={200} height={200}/>
             </div>
             <div className="col-lg-6">
                 <div className='container info'> 

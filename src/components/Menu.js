@@ -28,7 +28,7 @@ export default function Menu({ code }) {
     <BrowserRouter>
       <Header />
         <Routes> 
-          <Route path="library" element={<Library spotify={token}/>}/>
+          <Route path="/" element={<Library spotify={token}/>}/>
 
           <Route path="top-artists" element={<TopArtists spotify={token}/>}/>
           <Route path="top-artists/short-term" element={<TopArtists spotify={token} timeRange={'short_term'}/>}/>
