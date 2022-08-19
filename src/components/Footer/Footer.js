@@ -27,8 +27,8 @@ export default function Footer() {
     <section class="mb-4">
       <p>
         Acoustify is a project initially built to learn React.js (Frontend) and Node.js (Backend)
-        It incorporates user autentication and recieves user data through Spotify's Web Api. 
-        With the help of Michael Thelin's Spotify Web Api Node wrapper, endpoint requests are done 
+        It incorporates user authentication and recieves user data through Spotify's Web API. 
+        With the help of Michael Thelin's Spotify Web API Node wrapper, endpoint requests are done 
         through builtin functions which only require a token provided by Spotify. Future development
         will include Web Playback SDK which will allow users to play songs in Spotify directly through
         this web app.
@@ -41,7 +41,7 @@ export default function Footer() {
 
           <ul class="list-unstyled mb-0">
             <li>
-              <Link className="text-white" to="/"> Library</Link>
+              <Link className="text-white" to="/library"> Library</Link>
             </li>
             <li>
               <Link className="text-white" to="/recommend"> Recommendations</Link>

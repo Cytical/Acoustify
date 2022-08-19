@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Song( {data, id} ) {
+export default function Song( {data, id, index} ) {
 
     // console.log(data)
     const songName = data.name
@@ -13,7 +13,7 @@ export default function Song( {data, id} ) {
     <div className='container-sm song'> 
         <div className='row'> 
             <div className='col-lg-2'>
-                <div className='song-rank'>{id + 1}</div> 
+                <div className='song-rank'>{index + 1}</div> 
             </div>
             <div className="col-lg-4">
                 <img className='album-img' src={albumImage} alt='' width={320} height={320}/>

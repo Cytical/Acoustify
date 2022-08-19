@@ -20,6 +20,8 @@ export default function TopSongs({spotify, timeRange}) {
       console.log('Something went wrong!', err);
     });}, [spotify, timeRange])
 
+    // console.log(userTopTracks)
+
   return (
     <>
     <div className='page-info'> Top Songs </div>
@@ -50,8 +52,8 @@ export default function TopSongs({spotify, timeRange}) {
     </div>
 
 
-    {userTopTracks.map((data, key) => { 
-      return <Song data={data} id={key}/>
+    {userTopTracks.map((data, i) => { 
+      return <Song data={data} id={data.id} index={i}/>
     })}
     </>
   )
