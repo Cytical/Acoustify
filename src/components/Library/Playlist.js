@@ -2,12 +2,12 @@ import React from 'react'
 
 export default function Playlist( {data, index, id} ) {
 
-    console.log(data)
+    // console.log(data)
 
     const playlist_image = data.images[0].url;
     const playlist_name = data.name
 
-    console.log()
+    // console.log()
 
 
 

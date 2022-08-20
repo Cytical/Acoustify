@@ -80,6 +80,36 @@
     right: 0px;
 }
 
+.lib-img {
+    opacity: 1;
+    transition: .5s ease;
+}
+
+.current-song {
+    position: relative
+}
+ 
+.current-song:hover .play-img-song {
+    display: block;
+}
+
+.play-img-song {
+    position: absolute;
+    display: none;
+    top: 25%;
+    /* margin-left: 5px; */
+    margin-left: -4.75%;
+}
+
 img {
     object-fit: cover;
 }
+
+/* tr:hover {
+    color: #D58DC2;
+} */
+
+.current-song:hover {
+    color: #D58DC2;
+}
+

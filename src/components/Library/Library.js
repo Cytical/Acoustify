@@ -94,7 +94,7 @@ export default function Library({spotify}) {
     <div className='container'>
       <div className='library-label'> Liked Songs </div>
       <div className='table-scroll'>
-        <table className="table table-dark table-striped table-hover align-middle">
+        <table className="table table-dark table-striped table-hover align-middle saved-songs">
           <thead>
             <tr>
               <th scope="col">#</th>
