@@ -2,12 +2,14 @@ import React, { useState,useEffect } from 'react'
 import SavedSong from './SavedSong'
 import Playlist from './Playlist'
 import './Library.css'
+import MultiPlayer from './Multiplayer'
 
 export default function Library({spotify}) {
 
   // const [userId, setUserId] = useState('')
   const [userSongs, setUserSongs] = useState([])
   const [userPlaylists, setUserPlaylists] = useState([])
+  const [songUrls, setSongUrls] = useState([])
 
   useEffect(() => {
     if (!spotify) return
@@ -15,8 +17,9 @@ export default function Library({spotify}) {
     spotify.getMySavedTracks({ limit : 50 })
     .then(function(data) {
       setUserSongs([])
-      data.body.items.forEach(library => {
-        setUserSongs(old => [...old, library])
+      data.body.items.forEach(song => {
+        setUserSongs(old => [...old, song])
+        setSongUrls(old => [...old, song.track.preview_url])
       })
     }, function(err) {
       console.log('Something went wrong!', err);
@@ -24,7 +27,6 @@ export default function Library({spotify}) {
     // Get the authenticated user
     spotify.getMe()
       .then(function(data) {
-        // console.log(data.body.id)
         return data.body.id;
       }).then(function(user) {
         // Get a user's playlists
@@ -32,20 +34,23 @@ export default function Library({spotify}) {
         .then(function(data) {
           // console.log('Retrieved playlists', data.body.items);
           setUserPlaylists([])
-          data.body.items.forEach(library => {
-            setUserPlaylists(old => [...old, library])
+          data.body.items.forEach(playlist => {
+            setUserPlaylists(old => [...old, playlist])
           });
          });
       });
   }, [spotify])
 
-    const data = []
+    var data = []
 
     const render = () => {
 
     for (var i = 0; i < userPlaylists.length; i++) {
 
         if (i % 4 === 0 ) {
+            // console.log(userPlaylists[i].name)
+            // console.log(userPlaylists[i].id)
+            // console.log(i)
             if (i + 3 < userPlaylists.length) {
             data.push(
             <div className='container-lg playlist'>
@@ -88,9 +93,11 @@ export default function Library({spotify}) {
     }}
 
     render()
+    console.log(songUrls)
 
   return (
     <>
+    <MultiPlayer urls={songUrls}/>
     <div className='container'>
       <div className='library-label'> Liked Songs </div>
       <div className='table-scroll'>
