@@ -2,8 +2,6 @@ import React, {useState, useEffect} from 'react'
 import moment from 'moment/moment'
 import { Link } from'react-router-dom';
 
-
-
 export default function SavedSong( {data, index, id} ) {
 
     const songName = data.track.name

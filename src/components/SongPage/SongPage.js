@@ -35,6 +35,8 @@ export default function SongPage({spotify}) {
         });
     },  [spotify,id])
 
+    console.log(track);
+
   return (
     <> 
     <div className='container'>

@@ -36,16 +36,6 @@
     border-radius: 40px;
 }
 
-/* .container:hover {
-    transition: all 200ms;
-    font-size: 40px;
-} */
-
-
-/* .info {
-    background-color: black;
-} */
-
 .album-img {
     transition: 0.5s ease;
 }
