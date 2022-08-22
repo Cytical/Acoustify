@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import moment from 'moment/moment'
-import ReactPlayer from 'react-player'
+
 
 export default function SavedSong( {data, index, id} ) {
 
@@ -13,7 +13,6 @@ export default function SavedSong( {data, index, id} ) {
     // const songDateRelease = data.track.album.release_date
     const songDurationMs = data.track.duration_ms
     const previewAudio = data.track.preview_url
-    // console.log(previewAudio)
 
     const msToTime = (s) => {
         var ms = s % 1000;
@@ -55,7 +54,6 @@ export default function SavedSong( {data, index, id} ) {
 
   return (
     <>
-    {/* <ReactPlayer url= {previewAudio} /> */}
     <tbody>
         <tr className='current-song'>
             <th className='td-element text-muted' scope="row"> {index + 1}
