@@ -85,21 +85,7 @@
     transition: .5s ease;
 }
 
-.current-song {
-    position: relative
-}
- 
-.current-song:hover .play-img-song {
-    display: block;
-}
 
-.play-img-song {
-    position: absolute;
-    display: none;
-    top: 25%;
-    /* margin-left: 5px; */
-    margin-left: -4.75%;
-}
 
 img {
     object-fit: cover;
@@ -113,3 +99,21 @@ img {
     color: #D58DC2;
 }
 
+td .song-link {
+    display: block;
+    position: relative;
+    z-index: 1;
+    padding: 2em;
+    margin: -2em;
+    color: #a9a9a9;
+    text-decoration: none;
+}
+
+td .song-link-artist {
+    color: #a9a9a9;
+    text-decoration: none;
+}
+
+.playlist-img {
+    border-radius: 20px;
+}

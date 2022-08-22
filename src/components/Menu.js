@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import useAuth from '../useAuth'
+import Auth from '../useAuth'
 import SpotifyWebApi from 'spotify-web-api-node'
 import Header from './Header/Header.js'
 import Library from './Library/Library.js'
 import TopArtists from './TopArtists/TopArtists.js'
 import TopSongs from './TopSongs/TopSongs.js'
 import Recommend from './Recommend/Recommend.js'
+import SongInfo from './SongInfo/SongInfo.js'
 import Footer from './Footer/Footer.js'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -14,8 +15,15 @@ const spotifyApi = new SpotifyWebApi({
 })
 
 export default function Menu({ code }) {
-  
-  const accessToken = useAuth(code);
+
+  var accessToken;
+  // if (localStorage.token) {
+  //   accessToken = localStorage.token
+  // } else {
+  //   accessToken = Auth(code);
+  //   localStorage.token = accessToken
+  // }
+  accessToken = Auth(code);
   const [token, setToken] = useState("");
 
   useEffect(() => {
@@ -39,6 +47,8 @@ export default function Menu({ code }) {
           <Route path="top-songs/short-term" element={<TopSongs spotify={token} timeRange={'short_term'}/>}/>
           <Route path="top-songs/medium-term" element={<TopSongs spotify={token} timeRange={'medium_term'}/>}/>
           <Route path="top-songs/long-term" element={<TopSongs spotify={token} timeRange={'long_term'}/>}/>
+
+          <Route path="song/:id" element={<SongInfo spotify={token}/>}/>
 
           <Route path="recommend" element={<Recommend/>}/>
         </Routes>

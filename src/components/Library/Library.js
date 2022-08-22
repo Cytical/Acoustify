@@ -1,8 +1,7 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState,useEffect,useMemo } from 'react'
 import SavedSong from './SavedSong'
 import Playlist from './Playlist'
 import './Library.css'
-import MultiPlayer from './Multiplayer'
 
 export default function Library({spotify}) {
 
@@ -17,10 +16,12 @@ export default function Library({spotify}) {
     spotify.getMySavedTracks({ limit : 50 })
     .then(function(data) {
       setUserSongs([])
+      setSongUrls([])
       data.body.items.forEach(song => {
         setUserSongs(old => [...old, song])
         setSongUrls(old => [...old, song.track.preview_url])
       })
+      
     }, function(err) {
       console.log('Something went wrong!', err);
     }); 
@@ -41,9 +42,9 @@ export default function Library({spotify}) {
       });
   }, [spotify])
 
-    var data = []
-
     const render = () => {
+
+      var data = []
 
     for (var i = 0; i < userPlaylists.length; i++) {
 
@@ -90,14 +91,12 @@ export default function Library({spotify}) {
             </div>)
             }
         }
-    }}
+    } return data}
 
-    render()
-    console.log(songUrls)
+    const playlistData = render() 
 
   return (
     <>
-    <MultiPlayer urls={songUrls}/>
     <div className='container'>
       <div className='library-label'> Liked Songs </div>
       <div className='table-scroll'>
@@ -115,14 +114,14 @@ export default function Library({spotify}) {
             </tr>
           </thead>
             {userSongs.map((data, i) => { 
-              return <SavedSong data={data} index={i} key={data.track.id}/>
+              return <SavedSong data={data} index={i} key={data.track.id} id={data.track.id}/>
             })}
         </table>
       </div>
     </div>
     <div className='container'>
       <div className='library-playlist-label'> Your Playlists </div>
-          {data}
+          {playlistData}
     </div>
     </>
   )

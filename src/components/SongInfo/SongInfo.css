@@ -1,0 +1,26 @@
+.song-title {
+    font-size: 48px;
+    font-weight: 600;
+    margin-top: 20%;
+}
+
+.song-artists {
+    font-size: 32px;
+    font-weight: 400;
+    color:grey
+}
+
+.album-img {
+    border-radius: 7px;
+    margin-top: 20%;
+}
+
+.released {
+    color: grey;
+    margin-top: 10%;
+    font-size: 20px;
+}
+
+.album-date {
+    font-size: 32px;
+}
