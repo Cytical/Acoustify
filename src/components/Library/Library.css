@@ -6,7 +6,6 @@
 
 .library-playlist-label {
     font-size: 48px;
-    padding-top: 10px;
     padding-bottom: 20px;
     color: #D58DC2;
 }
@@ -14,6 +13,8 @@
 .table-scroll {
     height: 500px;
     overflow-y: scroll;
+    overflow-x: hidden;
+    margin-bottom: 20px;
 }
 
 .card {

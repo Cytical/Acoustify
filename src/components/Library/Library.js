@@ -56,10 +56,10 @@ export default function Library({spotify}) {
             data.push(
             <div className='container-lg playlist'>
                 <div className='row'>
-                    <Playlist data={userPlaylists[i]} id={userPlaylists[i].id} key={userPlaylists[i].id} index={i}/>
-                    <Playlist data={userPlaylists[i + 1]} id={userPlaylists[i + 1].id} key={userPlaylists[i + 1].id} index={i + 1}/>
-                    <Playlist data={userPlaylists[i + 2]} id={userPlaylists[i + 2].id} key={userPlaylists[i + 2].id} index={i + 2}/>
-                    <Playlist data={userPlaylists[i + 3]} id={userPlaylists[i + 3].id} key={userPlaylists[i + 3].id} index={i + 3}/>
+                    <Playlist data={userPlaylists[i]} id={userPlaylists[i].id} key={userPlaylists[i].id} index={i} spotify={spotify}/>
+                    <Playlist data={userPlaylists[i + 1]} id={userPlaylists[i + 1].id} key={userPlaylists[i + 1].id} index={i + 1} spotify={spotify}/>
+                    <Playlist data={userPlaylists[i + 2]} id={userPlaylists[i + 2].id} key={userPlaylists[i + 2].id} index={i + 2} spotify={spotify}/>
+                    <Playlist data={userPlaylists[i + 3]} id={userPlaylists[i + 3].id} key={userPlaylists[i + 3].id} index={i + 3} spotify={spotify}/>
                 </div>
             </div>)
             }
@@ -67,9 +67,9 @@ export default function Library({spotify}) {
             data.push(
             <div className='container-lg playlist'>
                 <div className='row'>
-                    <Playlist data={userPlaylists[i]} id={userPlaylists[i].id} key={userPlaylists[i].id} index={i}/>
-                    <Playlist data={userPlaylists[i + 1]} id={userPlaylists[i + 1].id} key={userPlaylists[i + 1].id} index={i + 1}/>
-                    <Playlist data={userPlaylists[i + 2]} id={userPlaylists[i + 2].id} key={userPlaylists[i + 2].id} index={i + 2}/>
+                    <Playlist data={userPlaylists[i]} id={userPlaylists[i].id} key={userPlaylists[i].id} index={i} spotify={spotify}/>
+                    <Playlist data={userPlaylists[i + 1]} id={userPlaylists[i + 1].id} key={userPlaylists[i + 1].id} index={i + 1} spotify={spotify}/>
+                    <Playlist data={userPlaylists[i + 2]} id={userPlaylists[i + 2].id} key={userPlaylists[i + 2].id} index={i + 2} spotify={spotify}/>
                 </div>
             </div>)
             }
@@ -77,8 +77,8 @@ export default function Library({spotify}) {
             data.push(
             <div className='container-lg playlist'>
                 <div className='row'>
-                    <Playlist data={userPlaylists[i]} id={userPlaylists[i].id} key={userPlaylists[i].id} index={i}/>
-                    <Playlist data={userPlaylists[i + 1]} id={userPlaylists[i + 1].id} key={userPlaylists[i + 1].id} index={i + 1}/>
+                    <Playlist data={userPlaylists[i]} id={userPlaylists[i].id} key={userPlaylists[i].id} index={i} spotify={spotify}/>
+                    <Playlist data={userPlaylists[i + 1]} id={userPlaylists[i + 1].id} key={userPlaylists[i + 1].id} index={i + 1} spotify={spotify}/>
                 </div>
             </div>)
             }
@@ -86,7 +86,7 @@ export default function Library({spotify}) {
             data.push(
             <div className='container-lg playlist'>
                 <div className='row'>
-                    <Playlist data={userPlaylists[i]} id={userPlaylists[i].id} key={userPlaylists[i].id} index={i}/>
+                    <Playlist data={userPlaylists[i]} id={userPlaylists[i].id} key={userPlaylists[i].id} index={i} spotify={spotify}/>
                 </div>
             </div>)
             }

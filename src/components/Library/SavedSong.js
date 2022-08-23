@@ -10,7 +10,7 @@ export default function SavedSong( {data, index, id} ) {
     const albumName = data.track.album.name
     const dateAdded = data.added_at
     const songDurationMs = data.track.duration_ms
-    const previewAudio = data.track.preview_url
+    // const previewAudio = data.track.preview_url
 
     const msToTime = (s) => {
         var ms = s % 1000;
