@@ -33,15 +33,15 @@ export default function SavedSong( {data, index, id} ) {
             <th className='td-element text-muted' scope="row"> {index + 1}
             </th>
             <td className='td-element'>
-                <Link className="song-link" to={'song/' + id}> 
+                <Link className="song-link" to={'/song/' + id}> 
                 <img className= "lib-img" src= {albumImage} alt='' width={80} height={80} /> 
                 </Link>
-                <div className='lib-song-name'> <Link className="song-link" to={'song/' + id}> {songName} </Link></div>
-                <div className='lib-song-artist'> <Link className="song-link-artist" to={'song/' + id}> {artist} </Link></div>
+                <div className='lib-song-name'> <Link className="song-link" to={'/song/' + id}> {songName} </Link></div>
+                <div className='lib-song-artist'> <Link className="song-link-artist" to={'/song/' + id}> {artist} </Link></div>
             </td>
-            <td className='td-element'> <Link className="song-link" to={'song/' + id}> {albumName} </Link> </td>
-            <td className='td-element date-added'> <Link className="song-link" to={'song/' + id}> {moment(dateAdded).fromNow()} </Link> </td>
-            <td className='td-element text-gray'> <Link className="song-link" to={'song/' + id}> {msToTime(songDurationMs)} </Link> </td>
+            <td className='td-element'> <Link className="song-link" to={'/song/' + id}> {albumName} </Link> </td>
+            <td className='td-element date-added'> <Link className="song-link" to={'/song/' + id}> {moment(dateAdded).fromNow()} </Link> </td>
+            <td className='td-element text-gray'> <Link className="song-link" to={'/song/' + id}> {msToTime(songDurationMs)} </Link> </td>
         </tr>
     </tbody>
     </>

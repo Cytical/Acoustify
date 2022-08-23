@@ -20,6 +20,8 @@ export default function TopArtists({spotify, timeRange}) {
         console.log('Something went wrong!', err);
     }); }, [spotify, timeRange])
 
+    console.log(userTopArtists)
+
     const data = []
 
     const render = () => {

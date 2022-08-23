@@ -8,6 +8,7 @@ import TopArtists from './TopArtists/TopArtists.js'
 import TopSongs from './TopSongs/TopSongs.js'
 import Recommend from './Recommend/Recommend.js'
 import SongPage from './SongPage/SongPage.js'
+import ArtistPage from './ArtistPage/ArtistPage'
 import Footer from './Footer/Footer.js'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
@@ -53,6 +54,7 @@ export default function Menu({ code }) {
           <Route path="top-songs/long-term" element={<TopSongs spotify={token} timeRange={'long_term'}/>}/>
 
           <Route path="song/:id" element={<SongPage spotify={token}/>}/>
+          <Route path="artist/:id" element={<ArtistPage spotify={token}/>}/>
 
           <Route path="playlist-songs" element={<PlaylistSongs />}/>
 

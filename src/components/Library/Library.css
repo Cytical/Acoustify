@@ -118,3 +118,7 @@ td .song-link-artist {
 .playlist-img {
     border-radius: 20px;
 }
+
+.song-link {
+    text-decoration: none;
+}

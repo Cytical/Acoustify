@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from'react-router-dom';
 
 export default function Song( {data, id, index} ) {
 
@@ -10,6 +11,7 @@ export default function Song( {data, id, index} ) {
     // console.log('test')
 
   return (
+    <Link className="song-link" to={'/song/' + id}> 
     <div className='container-sm song'> 
         <div className='row'> 
             <div className='col-lg-2'>
@@ -26,5 +28,6 @@ export default function Song( {data, id, index} ) {
             </div>
         </div>
     </div>
+    </Link>
   )
 }

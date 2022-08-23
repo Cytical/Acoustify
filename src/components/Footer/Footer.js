@@ -83,7 +83,7 @@ export default function Footer() {
 
           <ul className="list-unstyled mb-0">
             <li>
-              <a href="https://developer.spotify.com/documentation/" className="text-white">Spotify Docs</a>
+              <a href="https://developer.spotify.com/documentation/web-api/reference/#/" className="text-white">Spotify Docs</a>
             </li>
             <li>
               <a href="https://github.com/thelinmichael/spotify-web-api-node" className="text-white">Web Api Node</a>
