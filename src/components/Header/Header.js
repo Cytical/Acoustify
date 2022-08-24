@@ -22,7 +22,7 @@ export default function Header() {
         <Link className="nav-link" to="/"> Library</Link>
         <Link className="nav-link" to="top-songs"> Top Songs</Link>
         <Link className="nav-link" to="top-artists"> Top Artists</Link>
-        <Link className="nav-link" to="recommend"> Recommend</Link>
+        {/* <Link className="nav-link" to="recommend"> Recommend</Link> */}
         <Link className="nav-link" to="search"> Search</Link>
       </div>
     </div>

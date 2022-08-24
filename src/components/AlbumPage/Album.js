@@ -9,7 +9,7 @@ export default function Album({spotify}) {
     console.log(albumId)
 
     useEffect(()=> {
-        spotify.getAlbumTracks(albumId, { limit : 50})
+        spotify.getAlbum(albumId)
         .then(function(data) {
             console.log('ALBUM', data.body);
             setAlbumTracks(data.body)

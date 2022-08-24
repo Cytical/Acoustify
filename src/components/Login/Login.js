@@ -25,7 +25,8 @@ const scopes = [
   "user-top-read",
   "user-modify-playback-state",
   "user-library-read",
-  "playlist-modify-public"
+  "playlist-modify-public",
+  "playlist-read-private"
 ];
 
 const accessUrl = `${auth_endpoint}?client_id=${clientId}&response_type=code&redirect_uri=${redirectUri}&state=${state}&scope=${scopes.join(

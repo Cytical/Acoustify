@@ -88,11 +88,11 @@ export default function ArtistPage({spotify}) {
     <div className='container'>
         {artistData ? <ArtistInfo {...artistData} spotify={spotify}/> : <></>}
         <div className='container'>
+        <div className='library-playlist-label'> Similar Artists</div>
+            {artistDataRender}
         <div className='library-playlist-label'>  Albums </div>
             {albumDataRender}
         </div>
-        <div className='library-playlist-label'> Similar Artists</div>
-            {artistDataRender}
     </div> 
     </>
   )
