@@ -9,3 +9,10 @@
     background-color: #212529;
     border-radius: 40px;
 }
+
+.artist-img:hover {
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 0.5s ease;
+}

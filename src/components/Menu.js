@@ -63,6 +63,7 @@ export default function Menu({ code }) {
 
           <Route path="recommend" element={<Recommend/>}/>
           <Route path="search" element={<Search spotify={token}/>}/>
+          <Route path="*" element={<Library spotify={token}/>}/>
         </Routes>
       <Footer />
     </BrowserRouter>

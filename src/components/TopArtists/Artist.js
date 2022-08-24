@@ -12,7 +12,7 @@ return (
         <Link className='link' to={'/artist/' + id}>
         <div className='artist-rank'> {index + 1} </div>
         <div className='artist-name'> {artistName} </div>
-        <img className='artist-img' src={artistImage} alt='' width={320} height={320}/>
+        <img className='artist-img' src={artistImage} alt='' width={300} height={300}/>
         </Link>
     </div>
 </>

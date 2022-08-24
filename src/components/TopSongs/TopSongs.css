@@ -36,6 +36,10 @@
     border-radius: 40px;
 }
 
+.container-sm.song:hover{
+    background-color: #9F548B;
+}
+
 .album-img {
     transition: 0.5s ease;
 }
