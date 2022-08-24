@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import moment from 'moment/moment'
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
+import { Link } from'react-router-dom';
 
 export default function SongInfo({artists, name, album, external_urls, preview_url, duration_ms, popularity, spotify}) {
 
@@ -64,7 +65,9 @@ export default function SongInfo({artists, name, album, external_urls, preview_u
             </div>
             <div className='col-lg-8 song-details'> 
                 <div className='song-title'> {name} </div>
-                <div className='song-artists'> {song_artists.join(" , ")} </div>
+                <Link className='link' to={'/artist/' + artistId}>
+                <div className='song-artists artist-title-link'> {song_artists[0]} </div>
+                </Link>
                 <div className='row'>
                     <div className='col-6'>
                         <div className='info-label'> Released: </div>

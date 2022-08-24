@@ -12,6 +12,7 @@ import ArtistPage from './ArtistPage/ArtistPage'
 import Footer from './Footer/Footer.js'
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "./ScrollToTop";
+import Album from './AlbumPage/Album'
 
 
 const spotifyApi = new SpotifyWebApi({
@@ -57,6 +58,7 @@ export default function Menu({ code }) {
           <Route path="artist/:id" element={<ArtistPage spotify={token}/>}/>
 
           <Route path="playlist-songs" element={<PlaylistSongs />}/>
+          <Route path="album-songs/:id" element={<Album spotify={token}/>}/>
 
           <Route path="recommend" element={<Recommend/>}/>
         </Routes>

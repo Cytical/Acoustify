@@ -1,0 +1,36 @@
+.artist-title {
+    font-size: 36px;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: 700;
+}
+
+.artist-img-info {
+    border-radius: 180px;
+    margin-top: 20%;
+}
+
+.artist-genres {
+    text-align: center;
+    font-size: 20px;
+}
+.info-label-artist {
+    text-align: center;
+    color: grey;
+    padding-top: 20px;
+
+}
+
+
+.artist-name {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.artist-title-link {
+    text-decoration: underline;
+}
+
+.artist-title-link:hover {
+    color:#D58DC2;
+}

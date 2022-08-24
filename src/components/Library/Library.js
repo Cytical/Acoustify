@@ -42,8 +42,6 @@ export default function Library({spotify}) {
       });
   }, [spotify])
 
-  // console.log(userSongs)
-
     const render = () => {
 
       var data = []
