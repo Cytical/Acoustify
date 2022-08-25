@@ -11,7 +11,7 @@ export default function Auth(code) {
     console.log(accessToken)
 
     useEffect(() => {
-        axios.post("https://acoustify-app.herokuapp.com/login", {code,})
+        axios.post("http://localhost:3001/login", {code,})
         .then(res => {
             setAccessToken(res.data.accessToken)
             setRefreshToken(res.data.refreshToken)
@@ -19,14 +19,14 @@ export default function Auth(code) {
             window.history.pushState({}, null, '/')
         }).catch((err) => {
             console.log(err)
-            window.location = '/'
+            // window.location = '/'
         })
     }, [code]) 
 
     useEffect(() => {
         if (!refreshToken || !expiresIn) return
         const interval = setInterval(() => { 
-        axios.post("https://acoustify-app.herokuapp.com/refresh", {refreshToken,})
+        axios.post("http://localhost:3001/refresh", {refreshToken,})
         .then(res => {
             setAccessToken(res.data.accessToken)
             setExpiresIn(res.data.expiresIn)
