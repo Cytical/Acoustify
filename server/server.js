@@ -8,9 +8,12 @@ const app = express();
 app.use(cors())
 app.use(bodyParser.json())
 
+console.log('HEREEE')
+
 app.post("/refresh", (req, res) => {
 
     console.log('hi')
+    console.log('IJFEWIHIHFE')
     const refreshToken = req.body.refreshToken
     const spotifyApi = new SpotifyWebApi({
     redirectUri: 'https://acoustify-app.herokuapp.com/',
@@ -35,6 +38,8 @@ app.post("/refresh", (req, res) => {
 
 app.post('/login', (req, res) => {
     const code = req.body.code
+
+    console.log('IJFEWIHIHFE')
 
     const spotifyApi = new SpotifyWebApi({
         redirectUri: 'https://acoustify-app.herokuapp.com/',
