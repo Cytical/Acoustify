@@ -10,7 +10,6 @@ export default function Search({spotify}) {
         spotify.searchTracks(search)
         .then(function(data) {
             setResults(data.body.tracks.items);
-            console.log(results)
         }, function(err) {
             console.error(err);
         });
@@ -21,8 +20,8 @@ export default function Search({spotify}) {
     <>
     <div className="container d-flex flex-column my-4 " style={{height: "100vh"}}>
         <form>
-        <div class="mb-3 mt-5 ">
-            <input type="search" class="form-control-lg form-control" value={search} placeholder='Search Songs/Artists' onChange={e => setSearch(e.target.value)}/>
+        <div className="mb-3 mt-5 ">
+            <input type="search" className="form-control-lg form-control" value={search} placeholder='Search Songs/Artists' onChange={e => setSearch(e.target.value)}/>
         </div>
         </form>
         <div className="flex-grow-1 my-2" style={{overflowY: "auto"}}>

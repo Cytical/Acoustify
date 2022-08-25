@@ -6,7 +6,9 @@ export default function Auth(code) {
     const [refreshToken, setRefreshToken] = useState()
     const [expiresIn, setExpiresIn] = useState()
 
-    // console.log(accessToken)
+    console.log(code)
+
+    console.log(accessToken)
 
     useEffect(() => {
         axios.post("http://localhost:3001/login", {code,})

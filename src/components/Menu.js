@@ -22,14 +22,7 @@ const spotifyApi = new SpotifyWebApi({
 
 export default function Menu({ code }) {
 
-  var accessToken;
-  // if (localStorage.token) {
-  //   accessToken = localStorage.token
-  // } else {
-  //   accessToken = Auth(code);
-  //   localStorage.token = accessToken
-  // }
-  accessToken = Auth(code);
+  const accessToken = Auth(code);
   const [token, setToken] = useState("");
 
   useEffect(() => {
@@ -37,6 +30,8 @@ export default function Menu({ code }) {
     spotifyApi.setAccessToken(accessToken)
     setToken(spotifyApi)
   }, [accessToken])
+
+  console.log(token)
   
   return (
     <BrowserRouter>
