@@ -15,7 +15,7 @@ const generateRandomString = function(length) {
 const auth_endpoint = "https://accounts.spotify.com/authorize";
 
 const clientId = "ae3f94d228c64ca69dfb58b533b679ef";
-const redirectUri = "http://localhost:3000";
+const redirectUri = "https://acoustify-app.herokuapp.com/";
 const state = generateRandomString(16);
 const scopes = [
   "user-read-currently-playing",
