@@ -8,6 +8,8 @@ const app = express();
 app.use(cors())
 app.use(bodyParser.json())
 
+console.log('server live')
+
 app.post("/refresh", (req, res) => {
 
     console.log('hi')

@@ -16,10 +16,11 @@ export default function Auth(code) {
             setAccessToken(res.data.accessToken)
             setRefreshToken(res.data.refreshToken)
             setExpiresIn(res.data.expiresIn)
-            window.history.pushState({}, null, '/')
+            console.log('success')
+            // window.history.pushState({}, null, '/')
         }).catch((err) => {
             console.log(err)
-            window.location = '/'
+            // window.location = '/'
         })
     }, [code]) 
 
