@@ -11,7 +11,7 @@ export default function Auth(code) {
     console.log(accessToken)
 
     useEffect(() => {
-        axios.post("https://acoustify.onrender.com/api/login", {code,})
+        axios.post("https://acoustify-oauth.onrender.com/login", {code,})
         .then(res => {
             setAccessToken(res.data.accessToken)
             setRefreshToken(res.data.refreshToken)
@@ -27,7 +27,7 @@ export default function Auth(code) {
     useEffect(() => {
         if (!refreshToken || !expiresIn) return
         const interval = setInterval(() => { 
-        axios.post("https://acoustify.onrender.com/api/refresh", {refreshToken,})
+        axios.post("https://acoustify-oauth.onrender.com/refresh", {refreshToken,})
         .then(res => {
             setAccessToken(res.data.accessToken)
             setExpiresIn(res.data.expiresIn)
