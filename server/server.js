@@ -15,7 +15,7 @@ app.post("/refresh", (req, res) => {
     console.log('hi')
     const refreshToken = req.body.refreshToken
     const spotifyApi = new SpotifyWebApi({
-    redirectUri: 'https://acoustify.onrender.com/',
+    redirectUri: 'https://acoustify-app.herokuapp.com/',
     clientId: 'ae3f94d228c64ca69dfb58b533b679ef',
     clientSecret: 'd7de0fe9efc04794b090795a1b8c8e0a',
     refreshToken,
@@ -39,7 +39,7 @@ app.post('/login', (req, res) => {
     const code = req.body.code
 
     const spotifyApi = new SpotifyWebApi({
-        redirectUri: 'https://acoustify.onrender.com/',
+        redirectUri: 'https://acoustify-app.herokuapp.com/',
         clientId: 'ae3f94d228c64ca69dfb58b533b679ef',
         clientSecret: 'd7de0fe9efc04794b090795a1b8c8e0a',
     })
