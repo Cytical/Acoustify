@@ -17,10 +17,10 @@ export default function Auth(code) {
             setRefreshToken(res.data.refreshToken)
             setExpiresIn(res.data.expiresIn)
             console.log('success')
-            // window.history.pushState({}, null, '/')
+            window.history.pushState({}, null, '/')
         }).catch((err) => {
             console.log(err)
-            // window.location = '/'
+            window.location = '/'
         })
     }, [code]) 
 
